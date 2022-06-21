@@ -1,0 +1,392 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font-style: italic;"> patitas good</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/fuentes.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/fuente_registro-login.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/nosotros.css' %}">
+
+
+
+
+
+
+
+
+</head>
+
+<body style="background-image:url(img/fondopat.jpg);">
+
+    <!--barra 1 con logo e inicio de sesion-->
+    <div class="">
+        <!--logo-->
+        <nav class=" navbar navbar-expand-lg navbar-light  barra-one ">
+            <a class="navbar-brand" href="{% url 'index_central'%}">
+                <img src="{% static 'core/img/catlogo.png' %}" width="40" height="40" alt="">
+            </a>
+            <!--cierre de logo-->
+
+            <!--barra de busqueda-->
+            <div class=" navbar-collapse nav justify-content-center" id="navbarTogglerDemo02">
+                <form class="d-flex me-2 my-lg-0">
+                    <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success " type="submit">
+                        <img src="{% static 'core/img/iconobusque.png' %}" width="30" height="30" alt="">
+                    </button>
+                </form>
+            </div>
+            <!--cierre de busqueda-->
+
+            <!--login-->
+            <div class=" ">
+                <div class="btn-group ">
+                    <ul class="nav justify-content-lg-end ">
+                        <li class="nav-item ">
+                            <a class="nav-link dropdown " data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img src="{% static 'core/img/iconousuar.png' %}" alt="login" href="#" height="40px" width="40px">
+                            </a>
+                            <ul class="dropdown-menu menu-vertical">
+                                <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal"
+                                    data-target="#login">
+                                    iniciar session
+                                </button>
+                                <br>
+                                <p style="text-align: center;"> ¿eres nuevo?</p>
+                                <button type="button" class="btn btn-primary dropdown-item " data-toggle="modal"
+                                    data-target="#register">
+                                    crear nuevo usuario
+                                </button>
+                        </li>
+                    </ul>
+                </div>
+                <img src="{% static 'core/img/carrito.png' %}" class="carro" alt="carrito de compra">
+
+            </div>
+        </nav>
+    </div>
+    <!--cierre de barra login-->
+    <!--cierre de barra 1-->
+
+    <!--segunda barra-->
+    <div>
+        <nav class="barra-two">
+            <ul class="menu-horizontal ">
+                <li><a href="{% url 'index_central'%}">Inicio</a></li>
+                <li>
+                    <a href="{% url 'Tienda'%}">productos</a>
+                </li>
+              
+                <li><a href="{% url 'Formulario'%}" style="text-align: center;">Contacto</a></li>
+
+                <div class="">
+                    <input type="checkbox" id="btn-mod">
+                    <label for="btn-mod" class="btn menu-horizontal">Nosotros</label>
+                    <div class="mod">
+                        <div class="contenedor">
+                            <header style="color:aliceblue ;">¡Bienvenidos!</header>
+                            <label for="btn-mod"> X </label>
+                            <div class="contenido">
+                                <img src="{% static 'core/img/klipartz.com.png' %}" alt="" height="60" width="60" style="align-items:center ; ;">
+                                <p>
+                                    somos una fundacion de caridad
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </ul>
+        </nav>
+    </div>
+    <!--cierre de segunda barra-->
+
+
+    <!--imagen central-->
+    <br>
+    <br>
+    <nav class="br-one ">
+        <div class="carrusel ">
+            <ul>
+                <li><img src="{% static 'core/img/carrusel/1.jpg' %}" alt="" class="cat1"></li>
+                <li><img src="{% static 'core/img/carrusel/2.jpg' %}" alt="" class="cat1"></li>
+                <li><img src="{% static 'core/img/carrusel/3.jpg' %}" alt="" class="cat1"></li>
+                <li><img src="{% static 'core/img/carrusel/4.jpg' %}" alt="" class="cat1"></li>
+            </ul>
+        </div>
+    </nav>
+    <!--cierre de imagen central-->
+
+
+    <!--destacados-->
+    <br>
+    <br>
+    <nav class="br-one">
+        <div class="bloques">
+            <div class="bloque">
+                <figure>
+                    <div class="destacado">Destacado</div>
+                    <img src="{% static 'core/img/pp.png' %}" class="pp" alt="">
+                    <div class="capa">
+                        <br>
+                        <h5> gatos</h5>
+                        <p>¡Revisa nuestras nuevas arenas para gatitos!
+                            no te quedes sin tu arena gatuna
+                        </p>
+                    </div>
+                </figure>
+            </div>
+            <div class="bloque">
+                <figure>
+                    <div class="destacado">Destacado</div>
+                    <img src="{% static 'core/img/perrodest.jpg' %}" class="pp" alt="">
+                    <div class="capa">
+                        <br>
+                        <h5> Perros</h5>
+                        <p> ¡Trajimos nuevo trajes para tu perrito!
+                            revisa nuestros nuevos trajes
+                        </p>
+                    </div>
+                </figure>
+            </div>
+            <div class="bloque">
+                <figure>
+                    <div class="destacado">Destacado</div>
+                    <img src="{% static 'core/img/coedest.jpg' %}" class="pp" alt="">
+                    <div class="capa">
+                        <br>
+                        <h5> exoticos</h5>
+                        <p> nuevos accesorios para tus animalitos </p>
+                    </div>
+                </figure>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!--marcas-->
+    <nav class="br-one">
+        <div class="">
+            <div>
+                <img src="{% static 'core/img/pngegg.png' %}" alt="" height="100px" width="9000px">
+            </div>
+            <div class="capa">
+                <h2 class="title"> tus marcas favoritas</h2>
+            </div>
+            <br>
+            <br>
+        </div>
+    </nav>
+    <nav class="br-one">
+        <div class="img-bord">
+            <figure>
+                <img src="{% static 'core/img/cat-chow.png' %}" alt="" class="img-max">
+            </figure>
+        </div>
+        <div class="img-bord">
+            <figure>
+                <img src="{% static 'core/img/Felix-logo.jpeg' %}" alt="" class="img-max">
+            </figure>
+        </div>
+        <div class="img-bord">
+            <figure>
+                <img src="{% static 'core/img/royalcan.jpg' %}" alt="" class="img-max">
+            </figure>
+        </div>
+        <div class="img-bord">
+            <figure>
+                <img src="{% static 'core/img/Purina-Dog.webp' %}" alt="" class="img-max">
+            </figure>
+        </div>
+        <div class="img-bord">
+            <figure>
+                <img src="{% static 'core/img/pedigri.jpg' %}" alt="" class="img-max">
+            </figure>
+        </div>
+
+    </nav>
+    <!--cierre de marcas-->
+
+    <!--datos de nosotros-->
+
+    <!--modal login-->
+
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registro</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="register">
+                        <form class="needs-validation" novalidate>
+                            <div class="form-row">
+                                <div class="form-group col">
+                                    <label for="validationCustom01">Nombre</label>
+                                    <input type="text" class="form-control" id="validationCustom01"
+                                        placeholder="First name" value="" required>
+                                    <div class="valid-feedback">
+
+                                    </div>
+                                </div>
+                                <div class="form-group col">
+                                    <label for="validationCustom02">Apellido</label>
+                                    <input type="text" class="form-control" id="validationCustom02"
+                                        placeholder="Last name" value="" required>
+                                    <div class="valid-feedback">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <label for="validationCustom02">correo electronico</label>
+                                    <input type="email" class="form-control" id="validationCustom02"
+                                        placeholder="peluditos@****.com" value="" required>
+                                    <div class="valid-feedback">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <label for="validationCustom02">Contraseña</label>
+                                    <input type="password" class="form-control" id="validationCustom02"
+                                        placeholder="****" value="" required>
+                                    <div class="valid-feedback">
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" type="submit">Registrarse</button>
+                    <button class="btn btn-primary" type="reset"> Borrar</button>
+                    </form>
+
+                    <script>
+                        // Example starter JavaScript for disabling form submissions if there are invalid fields
+                        (function () {
+                            'use strict';
+                            window.addEventListener('load', function () {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function (form) {
+                                    form.addEventListener('submit', function (event) {
+                                        if (form.checkValidity() === false) {
+                                            event.preventDefault();
+                                            event.stopPropagation();
+                                        }
+                                        form.classList.add('was-validated');
+                                    }, false);
+                                });
+                            }, false);
+                        })();
+                    </script>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login">Iniciar sesion</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="">
+                            <div class="">
+                                <label for="validationCustom02">correo electronico</label>
+                                <input type="email" class="form-control" id="validationCustom02"
+                                    placeholder="peluditos@****.com" value="" required>
+                                <div class="valid-feedback">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="">
+                                <label for="validationCustom02">Contraseña</label>
+                                <input type="password" class="form-control" id="validationCustom02" placeholder="****"
+                                    value="" required>
+                                <div class="valid-feedback">
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <br>
+                <button class="btn btn-primary" type="submit">Iniciar</button>
+                </form>
+
+                <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+                    (function () {
+                        'use strict';
+                        window.addEventListener('load', function () {
+                            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                            var forms = document.getElementsByClassName('needs-validation');
+                            // Loop over them and prevent submission
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    <div class="container-fluid bg-light text-center p-3" style="margin-bottom: 0%;">
+        <p>&copy; Derechos Reservados</p>
+    </div>
+    </nav>
+</body>
