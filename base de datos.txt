@@ -1,0 +1,3 @@
+create user animalsfood identified by 123;
+grant connect, resource to animalsfood;
+alter user animalsfood default tablespace user quota unlimited on users;
